@@ -18,7 +18,7 @@ const AboutUsSection: React.FC = () => {
           exercitationem minima nihil iste aspernatur sed. Ut.
         </p>
         
-        <Link href="/"><a className={`${styles.link}`}>WATCH VIDEO <i className="bi bi-arrow-right-short" /></a></Link>
+        <Link href=""><a className={`${styles.link}`}>WATCH VIDEO <i className="bi bi-arrow-right-short" /></a></Link>
       </div>
     </section>
   );
