@@ -12,9 +12,10 @@
   }
 
   .text_area {
+    pointer-events:none;
     position: absolute;
-    display: flex;    
-    z-index: 2  ;
+    display: flex;
+    z-index: 2;
     top: 0;
     left: 0;
     width: 100vw;
@@ -23,7 +24,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;  
+    color: white;      
 
     .title {
       font-family: "Playfair Display";
