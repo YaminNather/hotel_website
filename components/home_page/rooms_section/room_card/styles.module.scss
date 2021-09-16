@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  transition: 300ms;
+
+  &:hover {
+    box-shadow: 0px 0px 8px lightgrey;
+  }
+  
+  .image_container {    
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    
+    img {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 300ms;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .text_container {
+    display: flex;    
+    padding-top: 32px;
+    padding-bottom: 32px;
+    flex-direction: column;
+    align-items: center;
+
+    .room_type {
+      font-size: 20px;
+    }
+
+    .cost {
+      color: #5c7893;
+    }
+  }
+}

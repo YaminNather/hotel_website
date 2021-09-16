@@ -1,0 +1,19 @@
+.rooms_section {
+  display: flex;
+  padding-top: 128px;
+  padding-bottom: 128px;
+  background-color: rgb(248, 249, 250);
+  flex-direction: column;
+  align-items: center;  
+
+  .room_cards_area {
+    margin-top: 128px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  .room_card {
+    background-color: red;
+  }
+}

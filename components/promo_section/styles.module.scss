@@ -1,0 +1,19 @@
+.promo_section {
+  display: flex;
+  height: 256px;  
+  background-image: url(https://preview.colorlib.com/theme/suites/images/xhero_1.jpg.pagespeed.ic.WnC_CEjW9b.webp);
+  background-attachment: fixed;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+
+  .right_area {
+    .timing {
+      font-size: 3rem;
+    }
+
+    .time_format {
+      color: rgba(white, 0.8);
+    }
+  }
+}

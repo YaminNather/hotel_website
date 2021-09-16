@@ -1,0 +1,116 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto;
+  line-height: 1.7;
+  // font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  // font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  //   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: red;
+  text-decoration: none;
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.h2 {  
+  font-size: 2rem;
+  // background-color: red;    
+}
+
+.container {  
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.spacer {
+ flex-grow: 1; 
+}
+
+.nav_bar_transparent {
+  position: fixed;
+  z-index: 500;
+  width: 100vw;
+  padding-top: 36px;
+  padding-bottom: 36px;
+  color: white;
+  transition: 500ms;
+
+  .logo {
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    transition: inherit;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;    
+  }
+
+  .nav_link {    
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 14px;
+  }
+
+  .nav_link_selected {
+    @extend .nav_link;
+    color: white;    
+  }
+  
+  .nav_link_unselected {
+    @extend .nav_link;
+    color: rgba(255, 255, 255, 0.6);
+    transition: inherit;
+  }
+}
+
+.nav_bar_white {
+  @extend .nav_bar_transparent;
+  background-color: white;
+  box-shadow: 0px 0px 4px lightgrey;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  color: black;
+
+  .logo {
+    color: black;    
+  }
+
+  .nav_link_selected {
+    color: red;
+  }
+
+  .nav_link_unselected {
+    color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+.underlined_heading {
+  position: relative;
+  font-family: Playfair Display;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 20%;
+    right: 20%;
+    height: 1px;
+    background-color: black;
+  }
+}
