@@ -18,7 +18,7 @@ const FeaturesSection: React.FC = () => {
       <span className={`h2 underlined_heading ${styles.heading}`}>Hotel Features</span>
       
       <div className={`${styles.buttons}`}>
-        {features.map( (value, index) => <FeatureButton feature={value} />)}
+        {features.map( (value, index) => <FeatureButton key={index} feature={value} />)}
       </div>
     </section>
   );

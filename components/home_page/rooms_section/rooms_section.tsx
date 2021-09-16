@@ -10,7 +10,7 @@ const RoomsSection: React.FC = () => {
       <span className={`h2 underlined_heading`}>Our Rooms</span>
       
       <div className={`${styles.room_cards_area}`}>
-        {roomInfos.map( (value, index, _) => <RoomCard roomInfo={value} /> )}
+        {roomInfos.map( (value, index, _) => <RoomCard key={index} roomInfo={value} /> )}
       </div>
     </section>
   );

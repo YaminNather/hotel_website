@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 
 const NavBar: React.FC = () => {
   const [transparent, setTransparent] = useState<boolean>(true);
@@ -23,19 +24,19 @@ const NavBar: React.FC = () => {
   return (
     <nav className={`nav_bar_${(transparent == true) ? "transparent" : "white"}`}>
       <div className={`container`}>
-        <a href="/" className={`logo`}>Suites</a>
+        <Link href="/"><a className={`logo`}>Suites</a></Link>
 
         <div className={`spacer`} />
 
-        <a href="/" className={`nav_link_selected`}>HOME</a>
+        <Link href="/"><a className={`nav_link_selected`}>HOME</a></Link>
           
-        <a href="/" className={`nav_link_unselected`}>ROOMS</a>
+        <Link href="/"><a className={`nav_link_unselected`}>ROOMS</a></Link>
         
-        <a href="/" className={`nav_link_unselected`}>EVENTS</a>
+        <Link href="/"><a className={`nav_link_unselected`}>EVENTS</a></Link>
         
-        <a href="/" className={`nav_link_unselected`}>ABOUT</a>
+        <Link href="/"><a className={`nav_link_unselected`}>ABOUT</a></Link>
         
-        <a href="/" className={`nav_link_unselected`}>CONTACT</a>            
+        <Link href="/"><a className={`nav_link_unselected`}>CONTACT</a> </Link>           
       </div>
     </nav>
   );

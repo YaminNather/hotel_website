@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import styles from "./styles.module.scss";
 
@@ -17,7 +18,7 @@ const AboutUsSection: React.FC = () => {
           exercitationem minima nihil iste aspernatur sed. Ut.
         </p>
         
-        <a href="/" className={`${styles.link}`}>WATCH VIDEO <i className="bi bi-arrow-right-short" /></a>
+        <Link href="/"><a className={`${styles.link}`}>WATCH VIDEO <i className="bi bi-arrow-right-short" /></a></Link>
       </div>
     </section>
   );
