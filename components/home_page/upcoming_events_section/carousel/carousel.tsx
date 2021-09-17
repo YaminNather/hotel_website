@@ -5,6 +5,7 @@ import styles from "./styles.module.scss";
 const gap: number = 32;
 
 const Carousel: React.FC = (props) => {
+  const [itemsRef, ItemsBound] = useMeasure();  
   const [index, setIndex] = React.useState<number>(0);
 
   function buildLeftButton(itemCount: number): React.ReactNode {
@@ -36,12 +37,11 @@ const Carousel: React.FC = (props) => {
   function render(): JSX.Element {
     const children: React.ReactNode[] = React.Children.toArray(props.children);
   
-    const items: React.ReactNode[] = children.map( (value, index, _) => <Item key={index}>{value}</Item> );
-    const [ref, bounds] = useMeasure();
+    const items: React.ReactNode[] = children.map( (value, index, _) => <Item key={index}>{value}</Item> );    
 
     return (
       <div className={`${styles.carousel}`}>
-        <div ref={ref} className={`${styles.items}`} style={{transform: `translateX(${1/6 * bounds.width * -index}px)`}}>
+        <div ref={itemsRef} className={`${styles.items}`} style={{transform: `translateX(${1/6 * ItemsBound.width * -index}px)`}}>
           {items}
         </div>
   

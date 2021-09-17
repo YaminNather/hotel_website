@@ -21,7 +21,7 @@ const HeroSection: React.FC = () => {
   return (
     <section id="hero_section" className={`${styles.hero_section}`}>
       <Carousel className={`${styles.carousel}`}>
-        {heroInfos.map((value, index, _) => <HeroSlide heroInfo={value} offsetY={offsetY} />)}
+        {heroInfos.map((value, index, _) => <HeroSlide key={index} heroInfo={value} offsetY={offsetY} />)}
       </Carousel>            
     </section>
   );
