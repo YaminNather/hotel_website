@@ -4,7 +4,7 @@ import styles from "./styles.module.scss";
 const PromoSection: React.FC = () => {
   return (
     <section id="promo_section" className={`${styles.promo_section} container`}>      
-      <span className={`${styles.heading} h2`}>Summer Promo 50% off</span>
+      <span className={`h2 ${styles.heading}`}>Summer Promo 50% off</span>
 
       <div className={`${styles.right_area}`}>
         <p>The PROMO WILL START IN</p>

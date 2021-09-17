@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import React from 'react';
-import GallerySection from '../components/gallery_section/gallery_section';
+import GallerySection from '../components/home_page/gallery_section/gallery_section';
 import AboutUsSection from '../components/home_page/about_us_section/about_us_section';
 import FeaturesSection from '../components/home_page/features_section/features_section';
 import HeroSection from '../components/home_page/hero_section/hero_section';
@@ -10,6 +10,9 @@ import RoomsSection from '../components/home_page/rooms_section/rooms_section';
 import NavBar from '../components/nav_bar/nav_bar';
 import PromoSection from '../components/promo_section/promo_section';
 import styles from '../styles/Home.module.scss'
+import UpcomingEventsSection from '../components/home_page/upcoming_events_section/upcoming_events_section';
+import ReviewsSection from '../components/home_page/reviews_section/reviews_section';
+import FooterSection from '../components/common/footer_section/footer_section';
 
 const Home: NextPage = () => {
   return (
@@ -33,6 +36,12 @@ const Home: NextPage = () => {
       <PromoSection />
 
       <GallerySection />
+
+      <UpcomingEventsSection />
+
+      <ReviewsSection />
+
+      <FooterSection />
       {/* <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>

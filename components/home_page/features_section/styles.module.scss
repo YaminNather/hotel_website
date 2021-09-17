@@ -5,10 +5,6 @@
   flex-direction: column;
   align-items: center;
 
-  .heading {
-
-  }
-
   .buttons {
     margin-top: 64px;
     display: grid;
@@ -26,7 +22,7 @@
       }
   
       .name {
-        // margin-top: 16px;
+        color: black;
         font-size: 1.25rem;
       }
     }
