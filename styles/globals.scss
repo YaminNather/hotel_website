@@ -1,3 +1,5 @@
+@import "variables";
+
 html,
 body {
   padding: 0;
@@ -12,7 +14,7 @@ body {
 }
 
 a {
-  color: red;
+  color: $primary;
   text-decoration: none;
 
   &:hover {
@@ -33,9 +35,14 @@ ul {
   color: black;
 }
 
-.container {  
+.container {
   padding-left: 200px;
   padding-right: 200px;
+
+  @media(max-width: 599px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 .spacer {
@@ -94,7 +101,7 @@ ul {
   }
 
   .nav_link_selected {
-    color: red;
+    color: $primary;
   }
 
   .nav_link_unselected {

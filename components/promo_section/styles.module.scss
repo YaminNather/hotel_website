@@ -1,19 +1,24 @@
 .promo_section {
-  display: flex;
-  height: 256px;  
+  display: flex;      
   background-image: url(https://preview.colorlib.com/theme/suites/images/xhero_1.jpg.pagespeed.ic.WnC_CEjW9b.webp);
   background-attachment: fixed;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   color: white;
 
   .heading {
+    flex-shrink: 0;
     color: inherit;
   }
 
-  .right_area {
+  .right_area {    
+    flex-shrink: 0;
+    
     .timing {
-      font-size: 3rem;
+      font-size: 2.2rem;
     }
 
     .time_format {

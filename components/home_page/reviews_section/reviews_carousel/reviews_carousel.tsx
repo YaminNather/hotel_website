@@ -2,11 +2,13 @@ import React from "react";
 import styles from "./styles.module.scss";
 import dynamic from "next/dynamic";
 import { arrowsPlugin, Dots, slidesToShowPlugin } from "@brainhubeu/react-carousel";
+import useWindowSize, { Size } from "../../../common/hooks/use_screen_size";
 
 const Carousel = dynamic(() => import("@brainhubeu/react-carousel"), { ssr: false });
 
 const ReviewsCarousel: React.FC = (props) => {  
   const [carouselValue, setCarouselValue] = React.useState<number>(0);
+  const windowSize: Size = useWindowSize();
 
   function buildArrow(direction: string): JSX.Element {
     return (
@@ -44,13 +46,16 @@ const ReviewsCarousel: React.FC = (props) => {
   }
 
   function render(): JSX.Element {
+    console.log(`Window size = ${windowSize.width}, ${windowSize.height}`);
+    const slidesInViewport: number = (windowSize.width <= 599) ? 1 : 2;
+
     return (
       <div className={`${styles.reviews_carousel}`}>
         <Carousel 
           onChange={(value) => setCarouselValue(value)}
           plugins= {[
             'infinite', 
-            { resolve: slidesToShowPlugin, options: { numberOfSlides: 2 } },
+            { resolve: slidesToShowPlugin, options: { numberOfSlides: slidesInViewport } },
             { 
               resolve: arrowsPlugin,
               options: {arrowLeft: buildArrow("left"), arrowRight: buildArrow("right"), addArrowClickHandler: true}

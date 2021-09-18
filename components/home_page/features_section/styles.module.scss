@@ -1,3 +1,5 @@
+@import "../../../styles/variables.scss";
+
 .features_section {
   padding-top: 128px;
   padding-bottom: 128px;
@@ -11,6 +13,10 @@
     width: 100%;
     grid-template-columns: repeat(4, 1fr);
 
+    @media(max-width: 599px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
     .button {
       display: flex;
       flex-direction: column;
@@ -18,7 +24,7 @@
       
       .icon {
         font-size: 96px;
-        color: red;
+        color: $primary;
       }
   
       .name {
