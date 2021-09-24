@@ -57,13 +57,18 @@
     }
 
     .social_icons_area {
-      @extend .area;
-      align-items: strech;
+      @extend .area;      
+      align-items: strech;            
       
       .icons {
         display: flex;
         width: 100%;
-        justify-content: space-between;        
+        justify-content: space-between;
+        
+        @media(max-width: 576px) {
+          padding-left: 32px;
+          padding-right: 32px;
+        }
       }
     }
   }

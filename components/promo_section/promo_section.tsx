@@ -12,8 +12,11 @@ const PromoSection: React.FC = () => {
         <p>
           {/* <span className={`${styles.timing}`}>00</span> <span className={`${styles.time_format}`}>weeks</span> */}
           &nbsp;<span className={`${styles.timing}`}>00</span> <span className={`${styles.time_format}`}>days</span>
+          
           &nbsp;<span className={`${styles.timing}`}>00</span> <span className={`${styles.time_format}`}>hours</span>
+          
           &nbsp;<span className={`${styles.timing}`}>00</span> <span className={`${styles.time_format}`}>mins</span>
+          
           &nbsp;<span className={`${styles.timing}`}>00</span> <span className={`${styles.time_format}`}>secs</span>
         </p>
       </div>

@@ -32,7 +32,7 @@ export default HeroSection;
 const heroInfos: HeroInfo[] = [
   new HeroInfo(
     "https://preview.colorlib.com/theme/suites/images/xhero_1.jpg.pagespeed.ic.iRGHvnzgRP.webp",
-    "Welcome to Suites", "HOTEL & RESORT"
+    "Welcome to Park Elanza", "HOTEL & RESORT"
   ),
   new HeroInfo(
     "https://preview.colorlib.com/theme/suites/images/xhero_2.jpg.pagespeed.ic.iRGHvnzgRP.webp",

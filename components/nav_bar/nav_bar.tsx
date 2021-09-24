@@ -24,19 +24,23 @@ const NavBar: React.FC = () => {
   return (
     <nav className={`nav_bar_${(transparent == true) ? "transparent" : "white"}`}>
       <div className={`container`}>
-        <Link href="/"><a className={`logo`}>Suites</a></Link>
+        <Link href="/"><a className={`logo`}>Park Elanza</a></Link>
 
         <div className={`spacer`} />
 
-        <Link href="/"><a className={`nav_link_selected`}>HOME</a></Link>
+        <div className={`nav_links`}>
+          <Link href="/"><a className={`nav_link_selected`}>HOME</a></Link>
+            
+          <Link href="/"><a className={`nav_link_unselected`}>ROOMS</a></Link>
           
-        <Link href="/"><a className={`nav_link_unselected`}>ROOMS</a></Link>
-        
-        <Link href="/"><a className={`nav_link_unselected`}>EVENTS</a></Link>
-        
-        <Link href="/"><a className={`nav_link_unselected`}>ABOUT</a></Link>
-        
-        <Link href="/"><a className={`nav_link_unselected`}>CONTACT</a></Link>           
+          <Link href="/"><a className={`nav_link_unselected`}>EVENTS</a></Link>
+          
+          <Link href="/"><a className={`nav_link_unselected`}>ABOUT</a></Link>
+          
+          <Link href="/"><a className={`nav_link_unselected`}>CONTACT</a></Link>           
+        </div>
+
+        <i className={"bi bi-list nav_links_button"} />
       </div>
     </nav>
   );
