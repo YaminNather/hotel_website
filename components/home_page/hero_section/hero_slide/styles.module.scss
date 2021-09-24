@@ -28,8 +28,14 @@
 
     .title {
       font-family: "Playfair Display";
-      font-size: 64px;
+      font-size: 4rem;
       font-weight: 900;
+      text-align: center;
+      
+      @media(max-width: 599px) {
+        font-size: 2.5rem;
+        font-weight: 500;
+      }
     }
 
     .subtitle {

@@ -1,6 +1,7 @@
 import { arrowsPlugin, Dots, slidesToShowPlugin } from "@brainhubeu/react-carousel";
 import dynamic from "next/dynamic";
 import React from "react";
+import useWindowSize, { Size } from "../../../common/hooks/use_screen_size";
 import EventCard from "../event_card/event_card";
 import styles from "./styles.module.scss";
 
@@ -9,7 +10,8 @@ const Carousel = dynamic(
 );
 
 const EventsCarousel: React.FC = (props) => {
-  const [carouselValue, setCarouselValue] = React.useState<number>(0);  
+  const [carouselValue, setCarouselValue] = React.useState<number>(0);
+  const windowSize: Size = useWindowSize();
 
   function buildArrow(direction: string): JSX.Element {
     return (
@@ -32,12 +34,15 @@ const EventsCarousel: React.FC = (props) => {
   }
 
   function render(): JSX.Element {
+    const slidesInViewport: number = (windowSize.width <= 599) ? 1 : 3;
+    console.log(`SlidesInViewport = ${slidesInViewport}`);
+
     return (
       <div className={`${styles.event_carousel}`}>
         <Carousel
           plugins= {[
             'infinite', 
-            { resolve: slidesToShowPlugin, options: { numberOfSlides: 3 } },
+            { resolve: slidesToShowPlugin, options: { numberOfSlides: slidesInViewport } },
             { 
               resolve: arrowsPlugin,
               options: {arrowLeft: buildArrow("left"), arrowRight: buildArrow("right"), addArrowClickHandler: true}
@@ -51,7 +56,7 @@ const EventsCarousel: React.FC = (props) => {
         <Dots
           value={carouselValue}          
           onChange={onChangeCallback} 
-          number={3}          
+          number={6}          
         />
       </div>
     );

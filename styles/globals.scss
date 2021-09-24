@@ -1,3 +1,5 @@
+@import "variables";
+
 html,
 body {
   padding: 0;
@@ -12,7 +14,7 @@ body {
 }
 
 a {
-  color: red;
+  color: $primary;
   text-decoration: none;
 
   &:hover {
@@ -33,9 +35,14 @@ ul {
   color: black;
 }
 
-.container {  
+.container {
   padding-left: 200px;
   padding-right: 200px;
+
+  @media(max-width: 599px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 .spacer {
@@ -62,22 +69,39 @@ ul {
     display: flex;
     align-items: center;    
   }
-
-  .nav_link {    
-    padding-left: 16px;
-    padding-right: 16px;
-    font-size: 14px;
-  }
-
-  .nav_link_selected {
-    @extend .nav_link;
-    color: white;    
-  }
   
-  .nav_link_unselected {
-    @extend .nav_link;
-    color: rgba(255, 255, 255, 0.6);
-    transition: inherit;
+  .nav_links {
+    display: flex;
+
+    @media(max-width: 768px) {
+      display: none;
+    }
+
+    .nav_link {    
+      padding-left: 16px;
+      padding-right: 16px;
+      font-size: 14px;
+    }
+
+    .nav_link_selected {
+      @extend .nav_link;
+      color: white;    
+    }
+    
+    .nav_link_unselected {
+      @extend .nav_link;
+      color: rgba(255, 255, 255, 0.6);
+      transition: inherit;
+    }
+  }
+
+  .nav_links_button {
+    display: inline;
+    font-size: 32px;
+
+    @media(min-width: 768px) {
+      display: none;
+    }
   }
 }
 
@@ -93,12 +117,14 @@ ul {
     color: black;    
   }
 
-  .nav_link_selected {
-    color: red;
-  }
+  .nav_links {
+    .nav_link_selected {
+      color: $primary;
+    }
 
-  .nav_link_unselected {
-    color: rgba(0, 0, 0, 0.6);
+    .nav_link_unselected {
+      color: rgba(0, 0, 0, 0.6);
+    }
   }
 }
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./styles.module.scss";
 
 interface Props {
@@ -9,6 +9,16 @@ interface Props {
 const Carousel: React.FC<Props> = (props) => {
   const [index, setIndex] = React.useState<number>(0);
   const [buttonsEnabled, setButtonsEnabled] = React.useState<boolean>(false);
+
+  React.useEffect(
+    () => {
+      const nextIndex: number = (index == items.length - 1) ? 0 : index + 1;
+      const timeout: NodeJS.Timeout = setTimeout(() => setIndex(nextIndex), 5000);
+
+      return () => clearTimeout(timeout);
+    },
+    [index]
+  );
 
   const items: JSX.Element[] = React.Children.map<JSX.Element, React.ReactNode>(
     props.children, 
